@@ -12,7 +12,7 @@ A Node.js backend server for the Thulir application.
 
 ## Prerequisites
 
-- Node.js (v14 or higher)
+- Node.js (v18 or higher)
 - npm or yarn
 
 ## Installation
@@ -63,6 +63,7 @@ Thulir-Backend/
 ├── models/            # Database models (to be added)
 ├── middleware/        # Custom middleware (to be added)
 ├── config/            # Configuration files (to be added)
+├── utils/             # Utility functions (to be added)
 ├── .env.example       # Environment variables template
 ├── .gitignore         # Git ignore rules
 ├── package.json       # Project dependencies
