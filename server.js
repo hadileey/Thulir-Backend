@@ -20,22 +20,24 @@ mongoose.connect(mongoURI)
     .then(() => console.log("✅ MongoDB Atlas Connected"))
     .catch(err => console.error("❌ Atlas Connection Error:", err));
 
+
 app.use(session({
-    name: 'medico_admin_session',
-    secret: process.env.SESSION_SECRET || 'secret',
-    resave: false,
-    saveUninitialized: false,
-    store: MongoStore.create({ 
-        mongoUrl: mongoURI,
-        collectionName: 'sessions',
-    }),
-    cookie: { 
-        maxAge: 1000 * 60 * 60 * 24, 
-        httpOnly: true,
-        secure: process.env.NODE_ENV === 'production',
-        sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax'
-    }
+  name: 'medico_admin_session',
+  secret: process.env.SESSION_SECRET || 'secret',
+  resave: false,
+  saveUninitialized: false,
+  store: MongoStore.create({
+    mongoUrl: mongoURI,
+    collectionName: 'sessions',
+  }),
+  cookie: {
+    maxAge: 1000 * 60 * 60 * 24,
+    httpOnly: true,
+    secure: true,
+    sameSite: "none"
+  }
 }));
+
 
 const apiRoutes = require('./routes/api');
 const { adminRouter } = require('./routes/admin');
