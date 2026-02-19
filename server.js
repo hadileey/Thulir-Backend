@@ -37,7 +37,6 @@ app.use(session({
     }
 }));
 
-// ... rest of your routes ...
 const apiRoutes = require('./routes/api');
 const { adminRouter } = require('./routes/admin');
 app.use('/api', apiRoutes);
