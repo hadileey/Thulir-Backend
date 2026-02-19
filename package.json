@@ -1,0 +1,28 @@
+{
+  "name": "thulir-backend",
+  "version": "1.0.0",
+  "description": "Backend server for Thulir application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hadileey/Thulir-Backend.git"
+  },
+  "keywords": ["backend", "api", "express", "thulir"],
+  "author": "Hadil KK",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/hadileey/Thulir-Backend/issues"
+  },
+  "homepage": "https://github.com/hadileey/Thulir-Backend#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1"
+  }
+}
